@@ -1,0 +1,18 @@
+spring:
+  datasource:
+      url: jdbc:postgresql://localhost:5433/vtb
+      driver-class-name: org.postgresql.Driver
+      username: test
+      password: test
+flyway:
+  url: ${spring.datasource.url}
+  schemas: "public"
+  user: ${spring.datasource.username}
+  password: ${spring.datasource.password}
+parse:
+  atm: false
+  office: false
+server:
+  error:
+    include-stacktrace: never
+rootSecret: vtbGoodBank

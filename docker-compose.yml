@@ -1,0 +1,12 @@
+services:
+  db:
+    container_name: vtb_db
+    image: postgres:16-alpine3.18
+    environment:
+      POSTGRES_DB: vtb
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+    volumes:
+      - ./../docker/volumes/vtb_db:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
