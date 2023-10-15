@@ -20,7 +20,7 @@ data class ReservedTimeTodayDto(
         return if (dateTime == null) null else dateTime.plusMinutes(service!!.time).toOffsetTime()
     }
 
-    fun getTime(): Long? {
-        return if (getTimeEnd() == null) null else ChronoUnit.MINUTES.between(OffsetTime.now(), getTimeEnd())
+    fun getMinutesUntilStartService(): Long? {
+        return if (getTimeEnd() == null) null else ChronoUnit.MINUTES.between(OffsetTime.now(), getTimeStart())
     }
 }

@@ -23,7 +23,6 @@ import io.swagger.v3.oas.annotations.enums.ParameterIn.HEADER
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.vtb.registration.dto.ReservedTimeTodayDto
 import org.vtb.registration.request.FreeTimeTodayRequest
-import java.time.temporal.ChronoUnit
 
 @RestController
 @RequestMapping("/registration")
@@ -58,23 +57,7 @@ class RegistrationController(
 
     @PostMapping
     fun registration(@RequestBody @Valid request: RegistrationRequest): RegistrationIdentifierDto? {
-        val dateTime = request.dateTime.let {
-            var minute = request.dateTime.minute
-            if (minute % 15 != 0) {
-                val ost = minute / 15
-                minute = (ost + 1) * 15
-            }
-            /*
-            TODO тут еще с днями разобраться, но мы принимаем тот факт, что филиалы работают максимум до 20.00
-             */
-            if (minute == 60) {
-                return@let it.withMinute(0).withHour(it.hour + 1)
-            }
-            if (minute != 0 && minute != request.dateTime.minute) {
-                return@let it.withMinute(minute)
-            }
-            return@let it
-        }.truncatedTo(ChronoUnit.MINUTES)
+        val dateTime = registrationService.roundUpDateTime(request.dateTime)
         return registrationService.add(request.copy(identifier = Random.nextInt(0, 999), dateTime = dateTime))
             ?: throw HttpClientErrorException(HttpStatus.BAD_REQUEST)
     }
