@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">VTB</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Поиск</string>
+    <string name="express">Срочно</string>
+    <string name="not_express">Несрочно</string>
+    <string name="phisic_face">Физические лица</string>
+    <string name="privilege">Привилегия</string>
+    <string name="prime">Прайм</string>
+    <string name="lawer_person">Юридические лица</string>
+    <string name="VIP">Доступно для маломобильных\nграждан</string>
+    <string name="apply">Применить</string>
+    <string name="check_card">Счета и карты</string>
+    <string name="investition">Вклады и инвестиционные продукты</string>
+    <string name="credit">Кредитные продукты</string>
+    <string name="ipoteka">Ипотечные продукты</string>
+    <string name="change_money">Обмен валюты, монеты</string>
+    <string name="road_for_man">Добраться пешком</string>
+    <string name="road_for_car">Добраться на автомобиле</string>
+    <string name="message">Пожалуйста, приходите в отделение за 5 минут до назначенного времени\n\n\nПри опоздании ваша запись будет отменена</string>
+    <string name="walk">Построить Маршрут</string>
+    <string name="Close">Закрыть</string>
+</resources>

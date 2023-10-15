@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/phone_VTB"
+    tools:context=".fragment.FilterAndRegistrationFragment">
+
+    <LinearLayout
+        android:id="@+id/face_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="9dp"
+        android:background="@drawable/background_for_button"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llPhisicPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/MainStyleText"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:text="@string/phisic_face" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbPhisicPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="0dp"
+                android:background="@null"
+                android:button="@null"
+                android:checked="true"
+                android:drawableStart="@drawable/radio_button_selector"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPrivilege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/MainStyleText"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:text="@string/privilege" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbPrivilege"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="0dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableStart="@drawable/radio_button_selector"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPrime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/MainStyleText"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:text="@string/prime" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbPrime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="0dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableStart="@drawable/radio_button_selector"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLawerPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/MainStyleText"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:text="@string/lawer_person" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbLawerPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="0dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableStart="@drawable/radio_button_selector"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llVip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="20"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/MainStyleText"
+                android:layout_weight="19"
+                android:layout_marginStart="20dp"
+                android:text="@string/VIP" />
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:background="@drawable/switcher_for_vip"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbVipCheck"
+                    android:checked="true"
+                    android:button="@null"
+                    android:background="@drawable/custom_radio_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rbVipUncheck"
+                    android:button="@null"
+                    android:background="@drawable/custom_radio_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnApply"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MainStyleText"
+            android:textColor="@color/white"
+            android:background="@drawable/background_for_button_v2"
+            android:text="@string/apply" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/service_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="9dp"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/option_1"
+                android:checked="true"
+                style="@style/MainStyleText"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:text="@string/check_card"
+                android:button="@null"
+                android:textColor="@color/white_black_check"
+                android:background="@drawable/background_for_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/option_2"
+                style="@style/MainStyleText"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:text="@string/investition"
+                android:button="@null"
+                android:textColor="@color/white_black_check"
+                android:background="@drawable/background_for_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/option_3"
+                style="@style/MainStyleText"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:text="@string/credit"
+                android:button="@null"
+                android:textColor="@color/white_black_check"
+                android:background="@drawable/background_for_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/option_4"
+                style="@style/MainStyleText"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:text="@string/ipoteka"
+                android:button="@null"
+                android:textColor="@color/white_black_check"
+                android:background="@drawable/background_for_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/option_5"
+                style="@style/MainStyleText"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:text="@string/change_money"
+                android:button="@null"
+                android:textColor="@color/white_black_check"
+                android:background="@drawable/background_for_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnApplyStage2"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MainStyleText"
+            android:textColor="@color/white"
+            android:background="@drawable/background_for_button_v2"
+            android:text="@string/apply" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="9dp">
+
+        <LinearLayout
+            android:id="@+id/titleMan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/background_for_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/man_item_image" />
+
+            <TextView
+                style="@style/MainStyleText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:text="@string/road_for_man" />
+
+            <ImageView
+                android:id="@+id/ivArrowMan"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/arrow_down" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMan"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <LinearLayout
+            android:id="@+id/titleCar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/background_for_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/car_item_image" />
+
+            <TextView
+                style="@style/MainStyleText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:text="@string/road_for_car" />
+
+            <ImageView
+                android:id="@+id/ivArrowCar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/arrow_down" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

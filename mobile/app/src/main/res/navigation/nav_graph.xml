@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/screenFromRealAppFragment">
+    <fragment
+        android:id="@+id/screenFromRealAppFragment"
+        android:name="com.example.vtb.fragment.ScreenFromRealAppFragment"
+        android:label="fragment_screen_from_real_app"
+        tools:layout="@layout/fragment_screen_from_real_app" >
+        <action
+            android:id="@+id/action_screenFromRealAppFragment_to_filterAndRegistrationFragment"
+            app:destination="@id/filterAndRegistrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yandexMap"
+        android:name="com.example.vtb.fragment.YandexMap"
+        android:label="fragment_yandex_map"
+        tools:layout="@layout/fragment_yandex_map" >
+        <action
+            android:id="@+id/action_yandexMap_to_talonFragment"
+            app:destination="@id/talonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterAndRegistrationFragment"
+        android:name="com.example.vtb.fragment.FilterAndRegistrationFragment"
+        android:label="fragment_filter_and_registration"
+        tools:layout="@layout/fragment_filter_and_registration" >
+        <action
+            android:id="@+id/action_filterAndRegistrationFragment_to_screenFromRealAppFragment"
+            app:destination="@id/screenFromRealAppFragment" />
+        <action
+            android:id="@+id/action_filterAndRegistrationFragment_to_yandexMap"
+            app:destination="@id/yandexMap" />
+        <action
+            android:id="@+id/action_filterAndRegistrationFragment_to_talonFragment"
+            app:destination="@id/talonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/talonFragment"
+        android:name="com.example.vtb.fragment.TalonFragment"
+        android:label="fragment_talon"
+        tools:layout="@layout/fragment_talon" >
+        <action
+            android:id="@+id/action_talonFragment_to_yandexMap"
+            app:destination="@id/yandexMap" />
+    </fragment>
+</navigation>

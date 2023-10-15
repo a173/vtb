@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/phone_VTB"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.TalonFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_for_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/vtb_logo" />
+
+        <TextView
+            android:id="@+id/number"
+            style="@style/MainStyleText"
+            android:textSize="82sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="A083" />
+
+        <TextView
+            android:id="@+id/service"
+            style="@style/MainStyleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="service" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/dark_blue_VTB" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/MainStyleText"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="service" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/dark_blue_VTB" />
+
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/dark_blue_VTB"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/message" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnWalk"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            style="@style/MainStyleText"
+            android:textColor="@color/white_black"
+            android:background="@drawable/background_for_button_v2"
+            android:text="@string/walk" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
