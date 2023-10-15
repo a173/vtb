@@ -10,8 +10,8 @@ flyway:
   user: ${spring.datasource.username}
   password: ${spring.datasource.password}
 parse:
-  atm: false
-  office: false
+  atm: true
+  office: true
 server:
   error:
     include-stacktrace: never
