@@ -28,7 +28,7 @@ import org.vtb.registration.request.FreeTimeTodayRequest
 @RequestMapping("/registration")
 class RegistrationController(
     private val registrationService: RegistrationService,
-    @Value("rootSecret")
+    @Value("\${rootSecret}")
     private val rootSecret: String
 ) {
 

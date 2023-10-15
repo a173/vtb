@@ -15,7 +15,7 @@ import org.vtb.office.request.AddOfficeRequest
 @RequestMapping("/office")
 class OfficeController(
     private val officeService: OfficeService,
-    @Value("rootSecret")
+    @Value("\${rootSecret}")
     private val rootSecret: String
 ) {
 
